@@ -1,0 +1,142 @@
+﻿@model SXUWebsite.Models.ContactUs
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <h3><span>Contact Us</span></h3>
+          <p>Send Us Your Messages, Suggestions, or Advices in Order To let Us Develop Our Services</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-6">
+            <div class="info-box mb-4">
+              <i class="bx bx-map"></i>
+              <h3>Our Address</h3>
+              <p>Iran str. Sana'a- Yemen</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-envelope"></i>
+              <h3>Email Us</h3>
+              <p>sxu@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-phone-call"></i>
+              <h3>Call Us</h3>
+              <p>+967 777127984</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-6 ">
+            <iframe class="mb-4 mb-lg-0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Iran%20str,Sana'Centeral%20Bank%20of%20Yemen,%20bank,%20%D8%B5%D9%86%D8%B9%D8%A7%D8%A1,%20Yemena,yemen+(SXU)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+          </div>
+
+          <div class="col-lg-6">
+
+
+               <form asp-action="Create" >
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Subject" class="control-label"></label>
+                <input asp-for="Subject" class="form-control" />
+                <span asp-validation-for="Subject" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Message" class="control-label"></label>
+                <textarea asp-for="Message" class="form-control" ><</textarea>
+                <span asp-validation-for="Message" class="text-danger"></span>
+            </div>
+           
+            <div class="form-group">
+                <div class="error-message"></div>
+            <input type="submit" value="Create" class="btn btn-primary" />
+                
+            </div>
+        </form>
+           @* <form asp-action="Create" class="php-email-form">
+            <div asp-validation-summary="All" class="text-danger">
+                <div class="col form-group">
+                  <input asp-for="Name" type="text"  class="form-control" id="name" placeholder="Your Name" required>
+                    <span asp-validation-for="Name" class="text-danger"></span>
+
+                </div>
+                <div class="col form-group">
+                  <input asp-for="Email" type="email" class="form-control"  id="email" placeholder="Your Email" required>
+                    <span asp-validation-for="Email" class="text-danger"></span>
+ 
+              </div>
+              </div>
+              <div class="form-group">
+                <input asp-for="Subject" type="text" class="form-control"  id="subject" placeholder="Subject" required>
+                            <span asp-validation-for="Subject" class="text-danger"></span>
+ 
+            </div>
+              <div class="form-group">
+                <textarea asp-for="Message" class="form-control"  rows="5" placeholder="Message" required></textarea>
+                            <span asp-validation-for="Message" class="text-danger"></span>
+  
+            </div>
+           
+              <div class="my-3"> 
+                  
+                  
+                <div class="loading">Loading</div>    
+                <div class="error-message"></div>
+                  <div class="text-center"><button type="submit">Send Message</button></div>
+
+            </div>
+
+             </form>*@
+
+              
+           
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+    @section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

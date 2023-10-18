@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  sxuwebsite:
+    image: ${DOCKER_REGISTRY-}sxuwebsite
+    build:
+      context: .
+      dockerfile: SXUWebsite\Dockerfile
